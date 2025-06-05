@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { ListComponent } from './features/list/list.component';
-import { CreateComponent } from './features/create/create.component';
 
 export const routes: Routes = [
   {
@@ -14,4 +13,11 @@ export const routes: Routes = [
         (m) => m.CreateComponent
       ),
   },
+  {
+    path: 'edit',
+    loadComponent: () =>
+      import('./features/edit/edit.component').then(
+        (m) => m.EditComponent
+      )
+  }
 ];
