@@ -15,8 +15,16 @@ export class ProductsService {
     return this.httpClient.get<Product[]>("/api/products")
   }
 
+  get(id: string) : Observable<Product> {
+    return this.httpClient.get<Product>(`/api/products/${id}`)
+  }
+
   post(playload: ProductPayload) {
     return this.httpClient.post("/api/products", playload)
   }
+
+  put(id: string, playload: ProductPayload) {{
+    return this.httpClient.put(`/api/products/${id}`, playload)
+  }}
 
 }
