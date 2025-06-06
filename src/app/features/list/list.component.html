@@ -4,6 +4,6 @@
 
 @for (product of products; track product.id) {
 
-  <app-card [product]="product" class="card" (edit)="onEdit(product)"></app-card>
+  <app-card [product]="product" class="card" (edit)="onEdit(product)" (delete)="onDelete(product)"></app-card>
 
 }
